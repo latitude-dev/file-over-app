@@ -1,1 +1,8 @@
-name,description,category,extensions,url
+name,description,extensions,category,url
+"Latitude","Developer-first embedded analytics",".sql,.html","Analytics + Data","https://latitude.so/"
+"Latitude","Developer-first embedded analytics",".sql,.html","Cloud Infrastructure","https://latitude.so/"
+"Latitude","Developer-first embedded analytics",".sql,.html","CMS","https://latitude.so/"
+"Latitude","Developer-first embedded analytics",".sql,.html","Databases","https://latitude.so/"
+"Latitude","Developer-first embedded analytics",".sql,.html","Design","https://latitude.so/"
+"Latitude","Developer-first embedded analytics",".sql,.html","Note taking","https://latitude.so/"
+"Latitude","Developer-first embedded analytics",".sql,.html","Other","https://latitude.so/"
