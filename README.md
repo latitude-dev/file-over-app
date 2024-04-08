@@ -1,6 +1,25 @@
-# Latitude starter project
+# File-over-app Directory
 
-This project is intended as a starting point for building Latitude applications. It is empty by default, but you can add your own data sources, models, and views to build a full-fledged application.
+> If you want to create digital artifacts that last, they must be files you can control, in formats that are easy to retrieve and read. Use tools that give you this freedom.
+>
+> — Steph Ango, [File over app](https://stephango.com/file-over-app)
+
+## Contributing
+
+If you want to add a missing tool or correct a mistake, please open a pull request. If you want to discuss something else, you can open an issue.
+
+### Adding a tool
+
+To add a tool, simply edit the `products.csv` file you'll find within the `queries` directory. The file is a CSV file with the following columns:
+
+- `name` - The name of the tool.
+- `description` - A brief description of the tool.
+- `extensions` - The file extensions the tool supports.
+- `category` - The category the tool belongs to.
+- `url` - The URL to the tool's website.
+- `open_source` - Whether the tool is open source or not.
+
+Submit a pull request with your changes, and we'll review it as soon as possible.
 
 ## Developing
 
