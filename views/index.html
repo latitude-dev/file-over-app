@@ -27,8 +27,8 @@
       </Column>
     </Column>
     <Column class="basis-9/12 gap-4">
-      <Input class="w-full max-w-full border-0 shadow-none rounded-lg bg-[#E8E4E0] focus-visible:ring-0" param='search' placeholder="Search…" />
-      {#await runQuery('products', { search: input('search') }, { reactiveToParams: true }) then products}
+      <Input class="w-full max-w-full border-0 shadow-none rounded-lg bg-[#E8E4E0] focus-visible:ring-0" param='search' value='' placeholder="Search…" />
+      {#await runQuery('products', { search: input('search') }, { reactiveToParams: 250 }) then products}
         {#each products.map(p => p.category).filter((value, index, self) => self.indexOf(value) === index) as category}
           <a id={category}><Text.H3 class="font-semibold mt-4">{category}</Text.H3></a>
           <Row class="grid grid-cols-2 gap-8 mt-2">
