@@ -1,7 +1,7 @@
 <svelte:head>
   <title>File-over-app Directory</title>
 </svelte:head>
-<View class="gap-16 p-16 min-h-screen items-center bg-[#F9F5F2] m-8 rounded-2xl">
+<View class="gap-24 py-24 min-h-screen items-center bg-[#F9F5F2]">
   <Row class="max-w-5xl">
     <Column class="max-w-[472px] gap-4">
       <Text.H1 class="font-bold text-center">File-over-app Directory</Text.H1>
@@ -20,6 +20,15 @@
           <a href={`#${row.category}`} class="text-sm font-semibold text-neutral-500 hover:text-neutral-800">{row.category}</a>
         {/each}
       {/await}
+      <Text.H4 class="font-semibold mt-8">Show</Text.H4>
+      <Select
+        param="open_source"
+        options={[
+          { value: 'all', label: 'All' },
+          { value: 'true', label: 'Open-source' }
+        ]}
+        value="all"
+      />
       <Column class="gap-2 mt-8">
         <Text.H4 class="font-semibold">Submit a product</Text.H4>
         <Text.H4 class="text-neutral-600">Missing a tool? Submit a pull request to add it.</Text.H4>
@@ -27,7 +36,7 @@
       </Column>
     </Column>
     <Column class="basis-9/12 gap-4">
-      <Input class="w-full max-w-full border-0 shadow-none rounded-lg bg-[#E8E4E0] focus-visible:ring-0" param='search' value='' placeholder="Search…" />
+      <Input class="w-full max-w-full border-0 shadow-none rounded-lg bg-white focus-visible:ring-0" param='search' value='' placeholder="Search…" />
       {#await runQuery('products', { search: input('search') }, { reactiveToParams: 250 })}
         <Text.H4 class='text-neutral-500'>Loading...</Text.H4>
       {:then products}
@@ -35,7 +44,13 @@
           <a id={category}><Text.H3 class="font-semibold mt-4">{category}</Text.H3></a>
           <Row class="grid grid-cols-2 gap-8 mt-2">
             {#each products.filter(p => p.category === category) as product}
-              <a href={product.url} target="_blank" rel="nofollow" class="p-6 rounded-xl flex flex-col gap-2 bg-white">
+              <a href={product.url} target="_blank" rel="nofollow" class="p-6 rounded-xl flex flex-col gap-2 bg-white ">
+                <Row class="justify-between mb-2">            
+                  <img src='https://www.google.com/s2/favicons?domain={product.url}&sz=128' class="w-8 h-8 object-contain rounded-lg" />
+                  {#if product.open_source}
+                    <div class="text-xs font-medium text-neutral-600 bg-neutral-100 px-2 py-1 grow-0 h-fit rounded-md">Open-source</div>
+                  {/if}
+                </Row>
                 <Text.H4 class="font-semibold">{product.name}</Text.H4>
                 <Text.H4 class="text-neutral-400">{product.description}</Text.H4>
                 <Row class="gap-2 mt-1">
@@ -52,5 +67,13 @@
       {/await}
     </Column>
   </Row>
+  <a
+    href='https://latitude.so/?utm_campaign=public-views&utm_source=views&utm_medium=referral'
+    rel='noreferrer'
+    target='_blank'
+    class='bg-gray-900 py-2 px-3 rounded-lg flex items-center fixed bottom-4 right-4'
+  >
+    <img src='https://www.google.com/s2/favicons?domain=https://docs.latitude.so/&sz=128' class='w-4 h-4 mr-1' />
+    <Text.H6 class='text-white font-semibold'>Made with Latitude</Text.H6>
+  </a>
 </View>
-<div class="pt-1"></div>

@@ -1,8 +1,18 @@
-name,description,extensions,category,url
-"Latitude","Developer-first embedded analytics",".sql,.html","Analytics + Data","https://latitude.so/"
-"Quarto","Developer-first embedded analytics",".sql,.html","Cloud Infrastructure","https://latitude.so/"
-"Latitude","Developer-first embedded analytics",".sql,.html","CMS","https://latitude.so/"
-"Latitude","Developer-first embedded analytics",".sql,.html","Databases","https://latitude.so/"
-"Latitude","Developer-first embedded analytics",".sql,.html","Design","https://latitude.so/"
-"Latitude","Developer-first embedded analytics",".sql,.html","Note taking","https://latitude.so/"
-"Latitude","Developer-first embedded analytics",".sql,.html","Other","https://latitude.so/"
+name,description,extensions,category,url,open_source
+"Latitude","Developer-first embedded analytics framework",".sql, .html","Analytics + Data","https://latitude.so/",true
+"Quarto","An open-source scientific and technical publishing system",".qmd","Analytics + Data","https://quarto.org/",true
+"Docusaurus","Easy to maintain open source documentation websites",".mdx","CMS","https://docusaurus.io/",true
+"Mintlify","The modern standard for public facing documentation",".mdx","CMS","https://mintlify.com/",false
+"Grav","Fast, simple, and flexible, file-based web-platform",".md, .yaml","CMS","https://getgrav.org/",true
+"Obsidian","Note-taking app that allows you to link and organize your thoughts",".md","Note taking","https://obsidian.md/",false
+"Logseq","Knowledge management tool that organizes notes and tasks in an outline format using linked, plain text files",".md","Note taking","https://logseq.com/",true
+"Foam","Personal knowledge management and sharing system",".md","Note taking","https://foambubble.github.io/",true
+"Acreom","Personal actionable knowledge base",".md","Note taking","https://acreom.com/",false
+"NotePlan","Productivity app that combines calendar, tasks, and notes using Markdown for efficient organization",".md","Note taking","https://noteplan.co/",false
+"tldraw","Simple, open-source drawing and diagramming tool",".tldr","Design","https://www.tldraw.com/",true
+"Figma","Online design tool used primarily for UI and UX design",".fig","Design","https://www.figma.com/",false
+"Terraform","Infrastructure automation to provision and manage resources in any cloud or data center",".tf, .tfstate, .tfvars, .tfplan","Cloud infrastructure","https://www.terraform.io/",false
+"Pulumi","Infrastructure as code in any programming language",".ts, .py, .go, .cs, .yaml","Cloud infrastructure","https://www.pulumi.com/",true
+"SQLite","Small, fast, self-contained, high-reliability, full-featured, SQL database engine",".db, .sqlite, .sqlite3","Databases","https://sqlite.org/",true
+"DuckDB","Fast in-process analytical database",".csv, .parquet","Databases","https://duckdb.org/",true
+"Anki","Powerful, intelligent flash cards.",".md","Other","https://apps.ankiweb.net/",true
